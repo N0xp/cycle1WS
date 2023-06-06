@@ -1,0 +1,17 @@
+this folder will contatin all the information about programming the VMX Pi using ROS 
+
+after having the ROS image in the VMX PI, open visual studio code on the microsoft laptop, add the required extention
+1- Remote Development package
+to connect through AP wifi, install:-
+PuTTY 
+enter teh IP addrise 10.12.34.2
+password: raspberry
+
+go to visual studio code, ctrl+shift+package
+add new ssh host 
+user 
+ssh pi@10.12.34.2
+password: raspberry
++++++++++++++++++++++++++++++++++++++++++++++++
+
+this folder will contatin the code to operate the VMX
