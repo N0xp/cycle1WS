@@ -15,3 +15,6 @@ password: raspberry
 +++++++++++++++++++++++++++++++++++++++++++++++
 
 this folder will contatin the code to operate the VMX
+
+the code file must be exsist on the VMX_ros_brigup folder 
+dont forget to edit the CMakefile to mache the files
