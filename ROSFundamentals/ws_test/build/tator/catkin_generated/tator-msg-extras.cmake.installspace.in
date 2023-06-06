@@ -1,0 +1,2 @@
+set(tator_MESSAGE_FILES "")
+set(tator_SERVICE_FILES "srv/addTwoPoint.srv")

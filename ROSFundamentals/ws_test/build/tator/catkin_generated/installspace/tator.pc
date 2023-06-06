@@ -1,0 +1,8 @@
+prefix=/home/pc/ws_test/install
+
+Name: tator
+Description: Description of tator
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

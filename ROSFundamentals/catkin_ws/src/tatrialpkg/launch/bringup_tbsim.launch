@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>    
+    <node pkg="tatrialpkg" type="AddTwoInit_node" name="service_node">
+        
+    </node>
+    <node pkg="tatrialpkg" type="AddTwonumberClint_node" name="clint_node">
+    
+    </node>
+
+
+</launch>

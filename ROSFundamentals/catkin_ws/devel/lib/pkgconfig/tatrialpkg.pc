@@ -1,0 +1,8 @@
+prefix=/home/pc/catkin_ws/devel
+
+Name: tatrialpkg
+Description: Description of tatrialpkg
+Version: 0.0.0
+Cflags: -I/home/pc/catkin_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

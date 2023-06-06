@@ -5,4 +5,4 @@ this folder contain the basic fundamentals of ROS.
 
 ++++++++++++++++++++++++++++++++++++++++++++++
 
-this folder will contain all what i did in the training 
+this folder will contain the workspace that i created during the training.

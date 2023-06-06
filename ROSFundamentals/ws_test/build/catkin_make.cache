@@ -1,0 +1,2 @@
+tator
+-DCATKIN_DEVEL_PREFIX=/home/pc/ws_test/devel -DCMAKE_INSTALL_PREFIX=/home/pc/ws_test/install -G Unix Makefiles

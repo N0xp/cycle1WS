@@ -1,0 +1,8 @@
+prefix=/home/pc/pupsub_ws/devel
+
+Name: quizpkg
+Description: Description of quizpkg
+Version: 0.0.0
+Cflags: -I/home/pc/pupsub_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

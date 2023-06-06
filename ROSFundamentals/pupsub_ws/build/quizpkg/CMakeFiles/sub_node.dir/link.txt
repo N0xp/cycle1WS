@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/sub_node.dir/src/sub_node.cpp.o  -o /home/pc/pupsub_ws/devel/lib/quizpkg/sub_node 
