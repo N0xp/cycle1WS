@@ -1,0 +1,22 @@
+Quiz Question
+
+What will be the value of i and j after the following code is executed?
+
+int i = 10;
+int j = i++;
+
+Answer :: i=11 , j=10
+
+
+part 2
+
+#include <iostream>
+int main()
+{
+    int i = 10;
+    int j = i++;
+    std::cout<<i<<"\n"<<j;
+    
+    
+    return 0;
+}

@@ -1,0 +1,83 @@
+Ultrasonic sensor
+	Ultrasonic sensor is a sensor that use the sound wave to meauser the distance until 400 cm 
+	
+	The ultrasonic has 4 pins:
+		1- VCC(VOLTAGE)
+		2- GRAUND
+		3- Trigger(connected to the digital pin )
+		4- Echo (connected to digital pin) 
+	
+	Trigger pin used to send the ultrasonic sound wave from the transmitter and the echo pin listen for the reflected signal 
+	
+	Trigger is an output
+	Echo is the input of the signal
+
+Encoder  
+	Distance 
+	What is encoder?
+		Electromechanical device that used to provide and electrical signal that is used for speed and position control, which turn the mechanical signal to electric signal that used to control system to monito specific parameters of the application .
+		
+		Its works by observing the magnetic field change in the magnet in the motor shaft,  there are two output:-
+			1- Output A
+			2- Output B
+		If the motor rotate CW the A signal will generate before B signal 
+	
+	
+	If  the motor rotate CCW B output will be before A output 
+	
+	
+	
+	
+	Sensor placed in the shaft to provide feedback to the controller, the feedback allow to detect the position and direction of motion,
+		There are two type of encoder:-
+			1- Absolute: report back the live position of the sensor
+			2- Incremental only indicate that has been change in  position and what change was
+	
+	In robotic mostly used is  incremental type.
+	
+	Distance formula 
+		Starting to calculate the distance per tic
+		
+	
+	
+	
+	
+	Then we will use the di
+	stance per tick to calculate the distance traveled:-
+	
+	
+	Speed 
+	The encoder are capable to provide speed feedback to the motors, speed can be represent in two main ways: -
+		1- Rpm revelation per mint 
+		2- m/s
+	Titan has an internal RPM count, so no external math is required 
+	The math to calculate the velocity of the motor 
+	
+	
+	
+	
+	
+Dc Motor
+	A 12DC V motor that has a gear ration of 1:61 with encoder counts per revolution on the output shaft will be 6* 61 = 366 1464.
+	
+Servo motor 
+	Convert the electric energy to mechanical energy, which used control to control the position of the motor using PWM signal 
+	PWM
+		PWM is pulse with modulation which is an electric way to control the digital signal of the component 
+		
+		 PWM signal can used for:
+			1- Controlling the speed of the motor 
+			2- Controlling the position of the micro controller 
+		
+		
+		To control the DC motor 
+			 the dc moto is controlled through the Duty cycle of the PWM signal which is the time ration of time a load or circuit is on compared to. The time the load od circuit is off, and the motor will take the average of the duty cycle 
+			
+			
+			Changing the Duty cycle will can create a several virial voltage to control the speed of the motor
+			
+		To control the position of the servo motor:
+			 the width of the pulse  determent the position of the servo 
+	
+PID CONTRILLER
+	  PID control stand for proportional integral derivative which gather to control the output of the system to e close to the required value regardless of the distraction 

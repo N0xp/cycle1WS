@@ -1,0 +1,10 @@
+What do the letters in OOP signify? Object Oreianted Program
+What is a class? is a building block that use in OOB that hold its won data member and it own function member 
+What is an object? the instanse of class 
+What are the 5 types of inheritance in C++? Single inheritance // Multiple inheritance //  Hierarchical inheritance // Multilevel inheritance  // Hybrid inheritance
+What are the three access class specifiers in C++? public // private // protacted 
+What is encapsulation? bundling of data and methods that operate on that data within a single unit, such as a class.
+What is data abstraction? programming technique that allows you to hide the implementation details of a class from the user of that class
+What is inheritance?  allows a new class to be based on an existing class
+What is an advantage of inline functions? hey can improve the performance of your program by reducing the overhead of function calls.
+What makes a class an abstract class? A pure virtual function is a virtual function that is declared in the base class but has no implementation.

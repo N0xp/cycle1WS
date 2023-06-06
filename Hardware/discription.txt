@@ -1,0 +1,1 @@
+this folder describes the hardware properties and basic fundamentals of the component.

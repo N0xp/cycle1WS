@@ -1,0 +1,18 @@
+class ClassName
+{
+      member1;
+      member2;
+      ...
+ public:
+     return variable accessFunction1(function parameters);
+     return variable accessFunction2(function parameters); 
+      ...
+} ;
+ returnVariable ClassName:: accessFunction1(function parameters)
+{
+    function statements;
+}
+ returnVariable ClassName:: accessFunction2(function parameters)
+{
+    function statements;
+}

@@ -1,0 +1,21 @@
+What is inheritance?
+	Is the ability of a function to gain the methods of other function
+		Three are three type of inheritance
+			1- Public 
+			2- Private 
+			3- Protected
+	
+	Syntax of inherance 
+	class GradStudent : public Student
+{
+    private:
+        string degree;
+    public:
+        GradStudent();
+        void setDegree(string degreeIn);
+        string getDegree();
+}; 
+		
+		
+	Multiple inherance 
+	class TeachingAssociate: public Staff, public GradStudent

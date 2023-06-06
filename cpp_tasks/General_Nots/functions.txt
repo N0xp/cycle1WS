@@ -1,0 +1,37 @@
+Function:
+	The function must contain:
+		1- A declaration: this is a statement of how the function is to be called.
+		2- A definition: this is the statement(s) of the task the function performs when called
+	
+	The power of the function:
+		1- Accept parameters, but they are not required.
+		2- Return values, but a return value is not required
+		3- Can modify parameters, if given explicit direction to do so
+
+The function syntax must contain:-
+	retVariableType functionName(parameter1, parameter2, ...,parameterN) { statement(s); }
+	
+	Example:
+	void printValues()
+{
+     std::cout<<"Hello World!";
+}
+
+
+Pass Variable by Reference
+	The second method for effecting variables outside of their scope, is to pass by reference.
+	
+	Passing by reference refers to passing the **address of the variable** rather than the variable. Then when we make a change in a function, we are changing the value at the address, not the variable. Once the value is changed at its address, any access to that address will retrieve the new value.
+	
+	We know how to access the address of any variable. We learned it in our Pointers lesson.
+	
+	So, now we can use that knowledge. In the program below, we'll pass the variable by reference.
+	
+	
+Passing Array as Refrence Parameters
+C++ does not allow arrays to be passed to functions, but, as we have seen, it does allow pointers to be passed.
+
+There are three methods for passing an array by reference to a function:
+• void functionName(variableType *arrayName)
+• void functionName(variableType arrayName[length of array])
+• void functionName(variableType arrayName[])

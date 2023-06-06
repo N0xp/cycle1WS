@@ -1,0 +1,48 @@
+To use Vectors:-
+	1- Include the (library #include <vector> )
+	2- Create Vector variable (std::vector<int> vectorInts;) :: vector variable with name (vectroinit
+
+To change the size of vector:
+	1- (vectro variable) .resize(num);vFloor.resize
+
+What is the defferences between vectors and Arrays?
+	Vectors are more versatile than arrays, and can be resized during runtime. We can also insert elements into a vector.
+Important:
+		we do not refer to the first element of a vector as the zero element, we call it the beginning. The last element is called end. To keep track of where we are in the vector, we need an iterator.
+Vector and iterators:
+	We are using iterator to run through the vector 
+	
+	
+Check the number of elements on the vector:
+Vector.size();
+
+Add element to he vector:
+Vectro.Assign(num,num,num,num)
+
+To print out the number of the element:
+ for (it = vectorInts.begin(); it != vectorInts.end(); ++it)
+    std::cout<<*it<<" ";
+
+
+
+insert elements
+insert is another method to add elements to a vector.
+insert adds elements to the location after the iterator.
+To add elements using insert:
+• Set the iterator to one before the location where you would like to add an element.
+
+(it= vectorInts.begin() + 1;)
+
+• Use insert to add the element.
+This sounds complicated, let's look at an example and you'll see it is fairly straight forward.
+vectorInts.insert(it, -1);
+
+
+
+emplace Elements
+Another method for adding elements is ::emplace.
+Emplace puts an element in a vector at the position pointed to by the iterator.
+Emplace differs from insert in the method used to insert the element. Insert copies the values of the vector while emplace does an in-place insertion. This means the insertion occurs at the point after the iterator.
+The difference makes emplace more efficient than insert in special cases.
+
+

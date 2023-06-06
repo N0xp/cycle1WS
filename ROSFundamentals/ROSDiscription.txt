@@ -1,0 +1,236 @@
+Ros Architecture 
+	Each component will place as node in the program and all the nodes will communicate with the main communication system as publisher and subscriber,
+	
+	We can use a programming language on one node and use other programming language on other node, then the conde will communicate perfectly between each others  
+	
+	The main idea of ROS is:-
+		a. Node 
+		b. parameter 
+		c. Topics 
+		d. Services 
+		e. Action 
+
+Navigation through ROS
+	1- To find the path of the pachage"rospack find [package_name]"
+	2- Change the directoray to a package to stack " roscd <package-or-stack>[/subdir] " 
+	3- take you to the folder where ROS stores log files "roscd log "
+	4- Ls what is inside a pakcage using the package name instead of the path " rosls <package-or-stack>[/subdir]" 
+Creating a Workspace 
+	To start programming with ros you have to make a work space which will  contain all packages and topic,
+		1- Make a folder "mkdir -p ~/test1/src"
+		2- Enter the new work space " cd test1"
+		3- Create a work space " catkin_make" 
+
+Creating a ROS packages 
+
+	To start with ROS we have to create in environment.
+	What is Environment?
+		Which is a declaration of a folder that will contain all ROS packages and topics 
+	To create a work space we have to :
+		a.  initialize the work space 
+		b. Create a packages 
+		c. Source the environment to the bash scrips 
+	Then creating the topics and packages inside the environment 
+	
+	Package.xml will contain:-
+		a. description tag
+		b. maintainer tags
+		c. license tags
+		d. dependencies tags
+		e. Final package.xml
+	
+	This file could be editable by it will dangers to edit 
+	
+	To create a package:
+		1- Ender the src folder and make the package with the required ROS packages " catkin_make_pkg roscpp rospy std_msgs"
+		2- Bake to the work space and perform the following command to ensure the that everything is correct " catkin_make"
+		3- If the user performed a mistake while configuring the packages, the user must follew the following steps to correct the packages depandancy:
+			i. Enter to Cmakefile on the src folder and change the name of the package to the correct name.
+			ii. Enter the XML file in the src and correct the packages name to the correct name.
+		4- To make sure that every thing is correct, run catkin_make in the ROS environment.
+		5- The last step is to surce the new environment to the bash script to make the temminal identify the new ROS environment:
+			i. Open home file
+			ii. Press control + h // to show all hiden files.
+			iii. Take the file .Bashrc to the VSC
+			iv. Open the termminal on the new ROS environment and press " source ~/catkin_ws/devel/setup.bash"
+			v. Copy the command and past it in the .Bashrc   
+
+Ros Node
+	Node is the main communication method between the build, which is a single processing module in ROS, and it will be used to control the motors and get the information form the environment, nodes are able to subscribe to one or more topics and node can publish for one or more topics, publisher node Gives the information to the topic, subscriber node takes the information from the topic
+	
+	
+	Summary: A node really isn't much more than an executable file within a ROS package. ROS nodes use a ROS client library to communicate with other nodes. Nodes can publish or subscribe to a Topic. Nodes can also provide or use a Service.
+	
+	Commands that use for nodes:
+		1- The main command to enter act with node is " rosnode" then the user will got the ability to interact with the node 
+		2- To presetn the information about a node " rosnode info (the name of the node)", this command will present the publisher node and the subscriber node to the node the we get the info from
+		3- Command to list all active node " rosnode list " present all the topic that connect to this node 
+		4- We can execute the node 
+		5- The most important thing to work with node is 
+			i. The type of node (publisher or subscriber)
+			ii. The type of date of the node
+			iii. The massage that used
+	
+	
+	Creating a node:
+		1- Enter the woek space
+		2- Enter the src finle in the package that you created 
+		3- Create a node inside the src folder of the topic 
+	
+	
+	Creating a publisher node:
+			i. include the required libraries:-
+				1) #include "ros/ros.h" (establish ros communicaiton)
+				2) #include (massages type)
+				3) #include (nay other libraries required to perform the task) 
+			ii. Create main funciton int main(int argc, char **argv)
+			iii. Inside the main function we will initialize the rosnode
+				1) Ros::init(argc,argv,"talker")// talker is the name of the node
+			iv. Create a handle node to reference assign to a new node, to intilize and shutdown the node and provides an extra layer of namespace resolution that can make writing subcomponents easier.
+				1) Ros::NodeHandle n;
+			v. Create a publisher 
+				1) Ros::Publiser chatter_publisher = n.advertise<std_msgs::strin("chatter",1000);
+				2) By this command, we initlize the publisher variable, creating variable of the node called chatter_publisher, using roshandel  to advertise the type of the massage , the massage and the buffer
+			vi. Define the hate of publishing
+				1) Ros::Rate loop_rate(1.0);
+					a) This will publish the data 1 massage per second
+			vii. Create a while loop to publish the massage
+				1) While(ros::ok) {} // the loop will keep spinning until we press Ctrl+c
+			viii. Create an object for the ros massage and object for string massage
+				1) Std::msgs::String msg;
+				2) Std::stringstream ss;
+			ix. Create a masage
+				1) Ss<< "helow workd"<< count; 
+			x. Assign the string data to the ros_msgs
+				1) Msg.data = ss.str();
+			xi. Print the content of the node in the terminal
+				1) ROS_INFO("[Talker] I published %s \n", msg.data.c_str()); 
+			xii. Publish the massage 
+				1) Chatter_publisher.publish(msg); // this command will put the massage in the buffer 
+			xiii. Ros::spinonce(); // the massage will be efficiently publish 
+			xiv. Loop_rate.sleep(); // to make a delay 
+		
+		After finishing of creating a node, we have to change the node into and executable node to run the node:-
+			Enter the src folder inside the package and write " chmod +x *" whichi si changing the mode for all files into an executable files 
+	
+
+USING OOP to create node
+		
+			  
+		
+	
+Topic
+	Topic is the edge that connect to different nodes which is a combination between publisher and subscriber data acquisition 
+		The main command to interact with topics is "rostopics"
+		1- We cant execute the topic
+		2- We can publish an information manualy through a topic using
+		"rostopic pub ( the topic that we wont to publish the information to ) ( the type of massage that we want to publish)"
+		3- To present the type of massage on the topic" rostopic type (the name of the topic)
+		4- To present the rate of data that transfare " rostopic hz (the name of the topic) "
+		
+	
+Massage 
+	ROS massage structure define hoe the data exchange between the topics, there are two type of massages,
+	Strings and Booleans 
+	
+	And there are the ability to combine the massage type and create anew massages type  
+	There are several massage type to communicate between physical quantity  and sensors.
+	
+	The massages can contain any type of data 
+	1- The main command to interact with the massages is "rosmsg"
+	2- To present the informaiton of the massage" rosmsg (the massage type)
+		Will present the data that transafe through this mssage
+	
+	
+Services
+	allow the passing of massages between the nods by interacting between the services by request and response the data, server has two component:-
+		1- Server which will define as node 
+		2- Client 
+	
+	When to use the service?
+		1- If the library funciton cant able to perform the command.
+		2- Use for quick operation
+		3- Use for C++/Python interoperability
+		4- When computer is connected to real hardware to access the real data of the robot 
+	
+	1- The node can implement one or more service (server)
+	2- Andy node can call a service ( clinet) 
+	3- Calls are synchronous blocky for this recourse to use ros Action 
+	
+	Enteracting with services using this command "rossrv"
+	
+	Steps to create a service:-
+		1- Define the service massage(service file )  
+			i. Create a new folder in the package called (srv)
+			ii. Inside the server we  have to define the service file ( servicefile.srv)
+			iii. The service file will contain two important information which called service definition 
+				1) The service requires integers that will sent form the clint to the server
+				2) Response of the server, and it’s a only a variable that 
+			iv. Compile the service and generate the source code for cpp and python and its have to be done when the service is created  
+				1) Enter the XML file of the package and the following liens 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+				 2) enter the Cmakelist in the package and Modefy the following,
+			
+				
+
+				By adding the message generation we are prepare the node to generate the message 
+					
+				3) Identify the service folder 
+				4) 
+
+
+				5) Uncomment the generate_messages  
+				
+				6) Compile the edit on the workspace using catkin_make command 
+				7) Add the executable command by adding the node name and the node file 
+				8) 
+				9) Add the (add_depancacies command) 
+				10) 
+				11) Add t argate link libraries 
+
+			i. 
+
+
+
+		Two interact with the service that we create:-
+			1- To list all the service 
+				1) Rosservice list
+			2- To interact with the service 
+				1) Rosservice call (the name of the service 
+			3- To get information about the service 
+				1) Rosservice info 
+			4- To get the message type and the service name
+				1) Rossrv show
+Parameter 
+	Rosparam:: allows to store and manupulate data on the ROS parameter Server, 
+	he Parameter Server can store integers, floats, boolean, dictionaries, and lists. rosparam uses the YAML markup language for syntax. In simple cases, YAML looks very natural: 1 is an integer, 1.0 is a float, one is a string, true is a boolean, [1, 2, 3] is a list of integers, and {a: b, c: d} is a dictionary. rosparam has many commands that can be used on parameters, as shown below:
+	
+
+
+Graphical computing 
+	Compute graph is used to visualized the nodes and the communication between the nods(RQT GRAPH)
+	
+	
+	
+Launch File 
+	The sub component in the launch file:-
+		1- Nodes Lunch 
+		2- Argument 
+		3- Parameter
+		4- Grouping
+		5- Name space
+		6- If condition through groups 
+	
+	The launch file use to launch several node in one terminal
+	There are two type of the launch file:-
+		1- Bring up
+		2- Dynamic 

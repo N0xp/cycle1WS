@@ -1,0 +1,7 @@
+When member function or an object behaves in different manner under different circumstance, then it can be define as polymorphism 
+
+There are two type of polymorphism:- 
+	1- Compile time poly; this type of poly accrue during the compile time, which is achieved by function overloading and operator overloading 
+	2- Run time poly; this type could be achieved when the function are called invoked during the runtime.
+
+A virtual function is a member function that you expect to be redefined in derived classes. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.

@@ -1,0 +1,8 @@
+this folder contain the basic fundamentals of ROS.
+1- you need to hace a laptop that contain a virtual machine that has Ubunto system
+2- download ROS to start with the fundamentals
+3- most of the fundamentals are explained on ROS wiki
+
+++++++++++++++++++++++++++++++++++++++++++++++
+
+this folder will contain all what i did in the training 
