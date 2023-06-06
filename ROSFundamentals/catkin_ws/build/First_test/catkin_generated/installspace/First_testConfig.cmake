@@ -67,7 +67,7 @@ set(First_test_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(First_test_SOURCE_PREFIX /home/pc/catkin_ws/src/First_test)
+  set(First_test_SOURCE_PREFIX /home/pc/catkin_ws/src/first_test)
   set(First_test_DEVEL_PREFIX /home/pc/catkin_ws/devel)
   set(First_test_INSTALL_PREFIX "")
   set(First_test_PREFIX ${First_test_DEVEL_PREFIX})

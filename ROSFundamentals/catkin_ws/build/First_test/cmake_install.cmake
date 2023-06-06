@@ -1,4 +1,4 @@
-# Install script for directory: /home/pc/catkin_ws/src/First_test
+# Install script for directory: /home/pc/catkin_ws/src/first_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pc/catkin_ws/build/First_test/catkin_generated/installspace/First_test.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pc/catkin_ws/build/first_test/catkin_generated/installspace/First_test.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/First_test/cmake" TYPE FILE FILES
-    "/home/pc/catkin_ws/build/First_test/catkin_generated/installspace/First_testConfig.cmake"
-    "/home/pc/catkin_ws/build/First_test/catkin_generated/installspace/First_testConfig-version.cmake"
+    "/home/pc/catkin_ws/build/first_test/catkin_generated/installspace/First_testConfig.cmake"
+    "/home/pc/catkin_ws/build/first_test/catkin_generated/installspace/First_testConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/First_test" TYPE FILE FILES "/home/pc/catkin_ws/src/First_test/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/First_test" TYPE FILE FILES "/home/pc/catkin_ws/src/first_test/package.xml")
 endif()
 
