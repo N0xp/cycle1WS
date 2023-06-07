@@ -18,3 +18,15 @@ this folder will contatin the code to operate the VMX
 
 the code file must be exsist on the VMX_ros_brigup folder 
 dont forget to edit the CMakefile to mache the files
+
+ the jason file to open on mac 
+     "workbench.colorTheme": "Default Dark Modern",
+    "remote.SSH.remotePlatform": {
+        "172.22.11.2": "linux",
+        "10.12.34.2": "linux"
+    },
+    "cmake.configureOnOpen": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-iot.vscode-ros"
+    },
+    "http.proxyAuthorization": null
